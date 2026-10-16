@@ -1,0 +1,76 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Contact | Kingdom Management Solutions, LLC</title>
+<meta name="description" content="Contact Kingdom Management Solutions, LLC about websites, software or consulting.">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<header class="nav">
+  <div class="wrap nav-inner">
+    <a class="brand" href="index.html">Kingdom <span>Management</span> Solutions</a>
+    <button class="menu-btn" aria-label="Toggle menu" aria-expanded="false">Menu</button>
+    <nav id="menu">
+      <a href="index.html#about">About</a>
+      <a href="index.html#services">Services</a>
+      <a href="index.html#portfolio">Portfolio</a>
+      <a href="contact.html" class="cta">Contact</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <section class="page-head">
+    <div class="wrap narrow">
+      <p class="eyebrow">Contact</p>
+      <h1>Let&rsquo;s talk about your project.</h1>
+      <p class="lead">Tell us a little about what you need and we&rsquo;ll get back to you.</p>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="wrap narrow">
+      <form id="contact-form" class="form" novalidate>
+        <div class="field">
+          <label for="name">Name</label>
+          <input id="name" name="name" type="text" autocomplete="name" required>
+        </div>
+        <div class="field">
+          <label for="email">Email</label>
+          <input id="email" name="email" type="email" autocomplete="email" required>
+        </div>
+        <div class="field">
+          <label for="org">Organization <span class="opt">(optional)</span></label>
+          <input id="org" name="organization" type="text" autocomplete="organization">
+        </div>
+        <div class="field">
+          <label for="topic">What can we help with?</label>
+          <select id="topic" name="topic" required>
+            <option value="Website design or development">A website</option>
+            <option value="Software or app development">Software or an app</option>
+            <option value="Consulting">Consulting</option>
+            <option value="Something else">Something else</option>
+          </select>
+        </div>
+        <div class="field">
+          <label for="message">Message</label>
+          <textarea id="message" name="message" rows="6" required></textarea>
+        </div>
+        <!-- spam trap: real visitors never see or fill this -->
+        <div class="hp" aria-hidden="true"><label>Leave blank <input type="text" name="_gotcha" tabindex="-1" autocomplete="off"></label></div>
+        <button class="btn primary" type="submit" id="send">Send message</button>
+        <p class="form-status" id="status" role="status" aria-live="polite"></p>
+      </form>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap">&copy; <span id="yr">2026</span> Kingdom Management Solutions, LLC. All rights reserved.</div>
+</footer>
+<script src="script.js"></script>
+<script src="contact.js"></script>
+</body>
+</html>
