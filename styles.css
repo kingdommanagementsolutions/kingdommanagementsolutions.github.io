@@ -107,3 +107,6 @@ footer{background:#0a1224;color:#9aa5bf;text-align:center;padding:26px 0;font-si
 .status{flex:none;font-size:.68rem;font-weight:700;padding:3px 10px;border-radius:999px;text-transform:uppercase;letter-spacing:.06em}
 .status.live{background:#e3f4e8;color:#1f6b3a}
 .status.soon{background:#fdf1d6;color:#7a4e00}
+
+.direct{margin:20px 0 0;color:var(--muted);text-align:center}
+.direct a{color:var(--navy2);font-weight:600}
