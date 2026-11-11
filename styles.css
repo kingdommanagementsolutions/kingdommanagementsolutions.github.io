@@ -110,3 +110,11 @@ footer{background:#0a1224;color:#9aa5bf;text-align:center;padding:26px 0;font-si
 
 .direct{margin:20px 0 0;color:var(--muted);text-align:center}
 .direct a{color:var(--navy2);font-weight:600}
+
+.tabs{display:flex;flex-wrap:wrap;gap:8px;margin:0 0 28px;border-bottom:2px solid #e6e1d4}
+.tab{font:inherit;font-weight:600;font-size:1rem;color:var(--muted);background:none;border:0;border-bottom:3px solid transparent;margin-bottom:-2px;padding:12px 22px;cursor:pointer}
+.tab:hover{color:var(--navy)}
+.tab[aria-selected="true"]{color:var(--navy);border-bottom-color:var(--gold)}
+.tab:focus-visible{outline:2px solid var(--gold);outline-offset:2px}
+.tab-panel[hidden]{display:none}
+nav a[aria-current="page"]:not(.cta){color:var(--gold)}

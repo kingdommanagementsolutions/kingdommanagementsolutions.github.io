@@ -59,3 +59,30 @@ document.getElementById('yr').textContent = new Date().getFullYear();
     next();
   }
 })();
+
+(function () {
+  const tabs = [...document.querySelectorAll('.tab')];
+  if (!tabs.length) return;
+  const select = (name, focus) => {
+    tabs.forEach(t => {
+      const on = t.dataset.tab === name;
+      t.setAttribute('aria-selected', on);
+      t.tabIndex = on ? 0 : -1;
+      document.getElementById('panel-' + t.dataset.tab).hidden = !on;
+      if (on && focus) t.focus();
+    });
+  };
+  tabs.forEach((t, i) => {
+    t.addEventListener('click', () => { select(t.dataset.tab); history.replaceState(null, '', '#' + t.dataset.tab); });
+    t.addEventListener('keydown', e => {
+      const step = { ArrowRight: 1, ArrowLeft: -1 }[e.key];
+      if (!step) return;
+      const n = tabs[(i + step + tabs.length) % tabs.length];
+      select(n.dataset.tab, true);
+      history.replaceState(null, '', '#' + n.dataset.tab);
+    });
+  });
+  const fromHash = () => { const h = location.hash.slice(1); select(tabs.some(t => t.dataset.tab === h) ? h : 'apps'); };
+  window.addEventListener('hashchange', fromHash);
+  fromHash();
+})();
